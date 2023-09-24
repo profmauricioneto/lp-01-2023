@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="pt-BR">
+
+<head>
+    <title>CryptoWord Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div > p {
+            font-size: large;
+        }
+
+        #description, #example, #project, #todo {
+            min-height: 100vh;
+        }
+        img {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<!-- body -->
+
+<body>
+    <div class="jumbotron text-center" style="margin-bottom:auto; background-color: steelblue; color: white;">
+        <h1>Projeto CryptoWord</h1>
+        <h2>Ceaser Cipher</h2>
+        <p>Projeto de criptografia de palavras e mensagens com base na técnica da substituição</p>
+    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#description">Descrição</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#example">Exemplo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#project">Projeto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#todo">Passos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--  -->
+    <div class="container-fluid" style="position: inherit;">
+        <div class="container-fluid" id="description" style="margin-top:10px; margin-left: 10px;">
+            <h1><strong>Descrição</strong></h1>
+            <hr>
+            <p>A encriptação simétrica, também chamada de encriptação convencional ou encriptação de chave única, era o
+                único tipo em uso antes do desenvolvimento da encriptação por chave pública na década de 1970.</p>
+            <p class="bg-danger"><b>IMPORTANTE:</b> vide imagem do modelo simplificado de encriptação simétrica.</p>
+
+            <img src="images/cifragemCesar.png" alt="exemplo de encriptação por cifra de césar" />
+            <img src="images/cifragemCesar2.png" alt="exemplo de decriptação por cifra de césar" />
+
+            <p><b>TÉCNICA:</b> TÉCNICA DE SUBSTITUIÇÃO OU CIFRAGEM DE CESAR</p>
+            <p>Uma técnica de substituição é aquela em que as letras do <b>texto claro</b> são substituídas por outras
+                letras, números ou símbolos. Se o texto claro for visto como uma sequência de bits, então a substituição
+                envolve trocar padrões de bits de <b>texto claro</b> por padrões de bits de <b>texto cifrado</b>.</p>
+            <p><b>CIFRA DE CÉSAR</b>: O uso mais antigo que conhecemos de uma cifra de substituição, e o mais simples,
+                foi feito por Júlio César. A cifra de César envolve substituir cada letra do alfabeto por aquela que
+                fica <i>N</i> (geralmente 3) posições adiante.</p>
+        </div>
+        <hr>
+        <hr>
+        <div class="container-fluid" id="example" style="margin-top: 10px;">
+            <h1><strong>Exemplo</strong></h1>
+            <hr>
+            <p>Supondo que o <i>Offset</i> é 3</p>
+
+            <dl style="font-size: large;">
+                <dt>Para N = 3</dt>
+                <dd>texto puro: <i>testando</i> => <i>whvwdqgr</i></dd>
+                <dd>texto cifrado: <i>whvwdqgr</i> => <i>testando</i></dd>
+
+                <dd><a href="http://wiki.stoa.usp.br/images/c/cf/Stallings-cap2e3.pdf">Conteúdo sobre o método de
+                        cifragem</a></dd>
+            </dl>
+        </div>
+        
+        <hr>
+        
+        <div class="container-fluid" id="project" style="margin-top: 10px;">
+            <h1><strong>Dados do Projeto</strong></h1>
+            <hr>
+            <dl style="font-size: large;">
+                <dt>Projeto CryptoWord</dt>
+                <dt>Linguagem: Java</dt>
+                <dt>Requisitos</dt>
+                <ol style="font-size: large;">
+                    <li>Conceitos Básicos de Programação</li>
+                    <li>Estrutura Sequencial</li>
+                    <li>Estrutura de Decisão</li>
+                    <li>Estrutura de Repetição</li>
+                    <li>Manipulação de String</li>
+                    <li>Sub-rotinas</li>
+                    <li>Arrays</li>
+                </ol>
+        </div>
+
+        <hr>
+
+        <div class="container-fluid" id="todo" style="margin-top: 10px;">
+            <h1><strong>Passo a Passo</strong></h1>
+            <hr>
+            <ul style="font-size: large;">
+                <li>Criar um projeto com a estrutura inicial em Java</li>
+                <li>Na main: criar a entrada de dados</li>
+                <li>Criar uma sub-rotina para encriptação de palavras</li>
+                <li>Criar uma sub-rotina para decriptação de palavras</li>
+                <li>Criar duas sub-rotinas para encriptar e decriptar frases</li>
+            </ul>
+        </div>
+
+        <footer class="bg-light text-center text-lg-start">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              Contato:
+              <a class="text-dark" href="mailto:mauricio.moreira@unichristus.edu.br">Prof. Maurício Neto</a>
+            </div>
+          </footer>
+    
+    </div>
+</body>
+
+</html>
