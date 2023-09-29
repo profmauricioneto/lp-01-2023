@@ -20,5 +20,6 @@ public class HelloWorldSwing {
         helloLabel.setBounds(30, 20, 200, 20);
         frame.setSize(300, 300);
         frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
