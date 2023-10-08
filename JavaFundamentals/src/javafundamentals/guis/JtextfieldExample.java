@@ -56,6 +56,18 @@ public class JtextfieldExample {
             }
         });
         
+        btnSend.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String fname = fnameTf.getText();
+                String lname = lnameTf.getText();
+                String age = ageTf.getText();
+                
+                result.setText("Olá " + fname + " " + lname + ", voce tem " + age);
+            }
+            
+        });
+        
         frame.add(panel);
         frame.setSize(400, 400);
         frame.setVisible(true);
