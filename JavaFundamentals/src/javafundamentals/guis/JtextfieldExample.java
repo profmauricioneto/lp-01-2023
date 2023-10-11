@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -62,8 +63,14 @@ public class JtextfieldExample {
                 String fname = fnameTf.getText();
                 String lname = lnameTf.getText();
                 String age = ageTf.getText();
+                String resultPhrase = fname.concat(" ").concat(lname).concat(", tem ").concat(age).concat(" anos de idade.");
                 
-                result.setText("Olá " + fname + " " + lname + ", voce tem " + age);
+                if (fname.isEmpty() || lname.isEmpty() || age.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Some Field is empty", "WARNING", 1);
+                } else {
+                    result.setText(resultPhrase);
+                }
+                
             }
             
         });
