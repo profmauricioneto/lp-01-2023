@@ -87,19 +87,24 @@ public final class ProgramSwingForm extends JFrame {
         add(pnlOutput);
     }
     
-    public void verifyFields(String fname, String lname, String age) {
+    public boolean verifyFields(String fname, String lname, String age) {
+        boolean flag = false;
         if(fname.isEmpty()) {
            String firstName = JOptionPane.showInputDialog(null, "First Name", "Incomplete Input", 1);
            tfFname.setText(firstName);
+           flag = true;
         }
         if(lname.isEmpty()) {
             String lastName = JOptionPane.showInputDialog(null, "Last Name", "Incomplete Input", 1);
             tfLname.setText(lastName);
+            flag = true;
         }
         if(age.isEmpty()) {
             String myAge = JOptionPane.showInputDialog(null, "Age", "Incomplete Input", 1);
             tfAge.setText(myAge);
+            flag = true;
         }
+        return flag;
     }
     
     private class ClearAction implements ActionListener {
@@ -118,9 +123,10 @@ public final class ProgramSwingForm extends JFrame {
             String fname = tfFname.getText();
             String lname = tfLname.getText();
             String age = tfAge.getText();
-            verifyFields(fname, lname, age);
-            String output = "Hello! Mr(s) ".concat(fname).concat(" ").concat(lname).concat("! You have ").concat(age).concat(" years old!");
-            lblOutput.setText(output);
+            if (!verifyFields(fname, lname, age)){
+                String output = "Hello! Mr(s) ".concat(fname).concat(" ").concat(lname).concat("! You have ").concat(age).concat(" years old!");
+                lblOutput.setText(output);              
+            }
         }
     }
 
