@@ -11,11 +11,13 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 /**
@@ -24,10 +26,16 @@ import javax.swing.JTextField;
  */
 public final class ProgramSwingForm extends JFrame {
     
-    JLabel lblFname, lblLname,lblAge, lblOutput;
+    // update: JLabel
+    JLabel lblFname, lblLname,lblAge, lblOutput, lbLang;
     JTextField tfFname, tfLname, tfAge;
     JButton btnClear, btnSend;
     JPanel pnlPersonalData, pnlButtons, pnlOutput;
+    // new elements
+    JRadioButton rbMale, rbFemale;
+    ButtonGroup rbGroup;
+    JPanel pnlGender;
+    JPanel pnlLang;
 
     public ProgramSwingForm() {
         super("My Swing Program!");
@@ -42,10 +50,15 @@ public final class ProgramSwingForm extends JFrame {
         btnClear = new JButton("Clear");
         btnSend = new JButton("Send");
         lblOutput = new JLabel("");
+        // new elements
+        rbMale = new JRadioButton("Male");
+        rbFemale = new JRadioButton("Female");
+        lbLang = new JLabel("Do you want to learn which programming languages?"); 
         
         initUI();
         
-        setLayout(new GridLayout(3,1));
+        // layout updated
+        setLayout(new GridLayout(4,1));
         setSize(500, 300);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -85,6 +98,21 @@ public final class ProgramSwingForm extends JFrame {
         pnlOutput.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         pnlOutput.setBorder(BorderFactory.createLineBorder(Color.BLUE));
         add(pnlOutput);
+        
+        // new elements
+        // JRadioButton
+        rbGroup = new ButtonGroup();
+        rbGroup.add(rbMale);
+        rbGroup.add(rbFemale);
+        
+        pnlGender = new JPanel();
+        pnlGender.setLayout(new FlowLayout());
+        pnlGender.add(rbMale);
+        pnlGender.add(rbFemale);
+        add(pnlGender);
+        
+        // JCheckBox
+        
     }
     
     public boolean verifyFields(String fname, String lname, String age) {
@@ -128,6 +156,15 @@ public final class ProgramSwingForm extends JFrame {
                 lblOutput.setText(output);              
             }
         }
+    }
+    
+    // criar uma action para o botao radio
+    private class RadioButtonAction implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            
+        }
+        
     }
 
     
