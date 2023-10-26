@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Programming JS</title>
+    <script>
+        function biggestNumber() {
+            let fnumber = document.getElementById('firstnumber').value;
+            let snumber = document.getElementById('secondnumber').value;
+            let message = "The biggest number is ";
+x
+            if(parseInt(fnumber, 10) > parseInt(snumber, 10)) {
+                document.getElementById('result').innerText = message + fnumber;
+            } else if(parseInt(fnumber, 10) < parseInt(snumber, 10)) {
+                document.getElementById('result').innerText = message + snumber;
+            } else {
+                document.getElementById('result').innerText = "Same Values";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>The Biggest Number</h2>
+    <label for="firstnumber">First Number: </label>
+    <input type="number" id="firstnumber"/>
+    <br/>
+    <label for="secondnumber">Second Number: </label>
+    <input type="number" id="secondnumber"/>
+    <br/>
+    <button onclick="biggestNumber()">Biggest</button>
+    <div id="result">
+        ...
+    </div>
+</body>
+</html>

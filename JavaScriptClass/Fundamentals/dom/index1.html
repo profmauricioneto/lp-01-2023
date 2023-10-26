@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise JavaScript</title>
+    <script>
+      function isNumber(input, message) {
+        if (isNaN(input)) {
+          window.alert(message);
+          console.log(message);
+        }
+      }
+      let setAlarm = setInterval(function () {
+        var hour = document.getElementById("hour").value;
+        isNumber(hour, "Hour value is not applicable!");
+        var minutes = document.getElementById("minutes").value;
+        isNumber(minutes, "Minutes value is not applicable!");
+        var message = document.getElementById("message").value;
+        if (
+          new Date().getHours() == hour &&
+          new Date().getMinutes() == minutes
+        ) {
+          document.getElementById("resultado").innerHTML = message;
+          window.alert(message);
+        }
+      }, 1000);
+    </script>
+  </head>
+  <body>
+    <h1>My JavaScript Alarm</h1>
+    <form>
+      <div>
+        <label for="hour">Hour</label> <br />
+        <input type="text" id="hour" />
+      </div>
+      <div>
+        <label for="minutes">Minutes</label> <br />
+        <input type="text" id="minutes" />
+      </div>
+      <div>
+        <label for="message">Message</label> <br / >
+        <textarea name="message" id="message" cols="40" rows="20"></textarea>
+      </div>
+    </form>
+    <button onclick="setAlarm()">Setup</button>
+    <div id="resultado"></div>
+  </body>
+</html>
