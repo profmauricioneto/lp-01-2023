@@ -8,7 +8,7 @@ public class Questao04 {
     }
 
     public static double calcularPesoIdeal(String genero, double altura) {
-        if(genero.equals("h") || genero.equals("homem")) {
+        if(genero.equals("homem") || genero.equals("h")) {
             return 72.7 * altura - 58;
         } else if(genero.equals("m") || genero.equals("mulher")) {
             return 62.1 * altura - 44.7;

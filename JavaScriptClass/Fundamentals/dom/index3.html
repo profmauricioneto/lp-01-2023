@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/script3.js"></script>
+</head>
+<body>
+    <h1 id="myheader">Cabeçalho</h1>
+    <p>texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto </p>
+    <button onclick="contagemParagrafo()">Conte P</button>
+    <p>Quantidade de paragrafos: <span id="result">0</span></p>
+</body>
+<script type="text/javascript">
+    function contagemParagrafo() {
+        var paragrafos = document.getElementsByTagName('p');
+        var cont = 0;
+        for (let i = 0; i < paragrafos.length; i++) {
+            cont++;
+            console.log(cont);
+        }
+        document.getElementById('result').innerHTML = cont;
+        window.alert(cont);
+    }   
+</script>
+</html>
