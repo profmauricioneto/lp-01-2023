@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <h1 class="title">Cabeçalho</h1>
+  <p class="phrase"> This is an example about JavaScript </p>
+  <p class="example" style="display: none;"> Javascript </p>
+  <p class="example" style="display: none;"> is an </p>
+  <p class="example" style="display: none;"> Awesome </p>
+  <p class="example" style="display: none;"> Language </p>
+  <button type="button" onclick="showPhrase()">Show Phrase</button>
+  <button type="button" onclick="hidePhrase()">Hide Phrase</button>
+  <button type="button" onclick="changeColorButton()">Change Color</button>
+
+  <script>
+    function showPhrase() {
+        var paragraphs = document.getElementsByClassName("example");
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "block";
+            // paragraphs[i].classList.add("new_class");
+        }
+    }
+
+    function hidePhrase() {
+        let paragraphs = document.getElementsByClassName("example");
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].style.display = "none";
+        }
+    }
+
+    function changeColorButton() {
+        let buttons = document.querySelectorAll("[type=button]");
+        for(let i = 0; i < buttons.length; i++) {
+          buttons[i].style.color = "white";
+          buttons[i].style.backgroundColor = "blue"; 
+        }
+
+    }
+  </script>
+
+</body>
+</html>

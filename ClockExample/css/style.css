@@ -1,0 +1,46 @@
+body {
+    background-color:  #b3b3bc;
+    font-family: 'Uchen', serif;
+    text-align: center;
+}
+header {
+    color: #4d423e;
+    font-size: 2rem;
+}
+main {
+    color: #2f302f;
+}
+#clock {
+    font-size: 10rem;
+}
+#period {
+    font-size: 2rem;
+}
+button {
+    background-color: #6c7c6e;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2f302f;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #d4bcd0;
+}
+footer a {
+    text-decoration: none;
+    color: #070a06;
+}

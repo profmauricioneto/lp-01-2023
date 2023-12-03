@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <h1 id="h1_id" class="class_h1">Cabeçalho</h1>
+  <p id="p1_id" class="class_p1">
+    Exemplo de texto dentro de um parágrafo. Pode ter outros elementos dentro desta tag, exemplo: <a href="#">link</a> ou outros elementos <b>como negrito</b>  
+  </p>
+  <button onclick="returnTotalParagraphs()">Total Paragraphs</button>
+  <p>Total de Paragraphs: <span id="result"></span></p>
+  <script>
+    function returnTotalParagraphs() {
+        var paragraphs = document.getElementsByTagName("p");
+        var i, cont = 0;
+        var colors = ["blue", "green", "red"];
+        for (i = 0; i < paragraphs.length; i++) {
+            cont++;
+            paragraphs[i].style.border = "5px solid " + colors[i];
+        }
+        document.getElementById("result").innerHTML = cont;
+       
+    }
+  </script>
+</body>
+</html>

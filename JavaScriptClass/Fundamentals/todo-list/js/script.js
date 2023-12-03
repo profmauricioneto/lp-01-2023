@@ -1,18 +1,17 @@
 function newLanguage() {
   var fields = document.getElementsByTagName("input");
-  var newLine = document.createElement("tr");
-  var i;
 
-  for (i = 0; i < fields.length; i++) {
-    if (fields[i].value === "") {
-      window.alert("Write Something in Language and Level!");
-    } else {
+  if (fields[0].value === "" || fields[0].value === "") {
+    window.alert("Write Something in Language and Level!");
+  } else {
+    var newLine = document.createElement("tr");
+    for (let i = 0; i < fields.length; i++) {
       var newColumn = document.createElement("td");
       newColumn.innerHTML = fields[i].value;
       newLine.appendChild(newColumn);
       fields[i].value = "";
     }
+    var tableData = document.getElementById("table-data");
+    tableData.appendChild(newLine);
   }
-  var table = document.getElementById("table");
-  table.appendChild(newLine);
 }
