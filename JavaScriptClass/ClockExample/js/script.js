@@ -1,3 +1,5 @@
+"use strict";
+
 function clockTime12hour() {
     // creating the clock variables
     let date = new Date();
@@ -23,10 +25,13 @@ function clockTime12hour() {
     // get the elements of html and put the time
     document.getElementById("clock").innerText = currentTime;
     document.getElementById("period").innerText = period;
-    let time = setTimeout(function(){
-        clockTime12hour()
+
+    var time12hour = setTimeout(function () {
+      clockTime12hour();
     }, 1000);
 }
+
+
 
 function clockTime24hour() {
     // creating the clock variables
@@ -48,18 +53,24 @@ function clockTime24hour() {
     // 
     document.getElementById("clock").innerText = currentTime;
     document.getElementById("period").innerText = period;
-    let time = setTimeout(function(){
-        clockTime12hour()
+
+    var time24hour = setTimeout(function () {
+      clockTime24hour();
     }, 1000);
 }
+
+
+
 // calling right function
 document.getElementById("twelve").onclick = function() {
     console.log("12 hour");
+    clearInterval(time24hour);
     clockTime12hour();
 }
 // calling right function
 document.getElementById("twentyHour").onclick = function() {
     console.log("24 hour");
+    clearInterval(time24hour);
     clockTime24hour();
 }
 
